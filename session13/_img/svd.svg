@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-1.5 3.5 241.03999 212.06217"
+   id="svg148"
+   sodipodi:docname="svd.svg"
+   width="241.03999"
+   height="212.06216"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="/home/gjaeger/lehre/aktuell/vectorSpaceSemantics/session04/_img/svd.png"
+   inkscape:export-xdpi="23.809999"
+   inkscape:export-ydpi="23.809999"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview150"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.756579"
+     inkscape:cx="114.09069"
+     inkscape:cy="95.952265"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg148" />
+  <title
+     id="title2">Singular Value Decomposition</title>
+  <desc
+     id="desc4">
+
+This is the File
+   http://commons.wikimedia.org/wiki/File:Singular-Value-Decomposition.svg
+
+Singular Value Decomposition of the 2-dimensional Shearing
+
+M = ( 1 1 )
+    ( 0 1 )
+
+The Image shows:
+
+Upper Left:
+	The unit Disc with the two canonical unit Vectors
+
+Upper Right:
+	Unit Disc et al. transformed with M and signular Values
+	sigma_1 and sigma_2 indicated
+
+Lower Left:
+	The Action of V^* on the Unit disc. This is a just
+	Rotation.
+
+Lower Right:
+	The Action of Sigma * V^* on the Unit disc. Sigma scales in
+	vertically and horizontally.
+
+The this special Case the singularValues are Phi and 1/Phi where
+Phi is the Golden Ratio. V^* is a (counter clockwise) Rotation by
+an angle alpha where alpha satisfies tan(alpha) = -Phi.
+U is a Rotation by beta with tan(beta) = Phi-1
+
+</desc>
+  <defs
+     id="defs58">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Send"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2) rotate(180) translate(6,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path5478" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path5466" />
+    </marker>
+    <!-- TeX Computer Modern -->
+    <path
+       id="M"
+       d="M 9.234,-6.047 C 9.328,-6.406 9.344,-6.5 10.09,-6.5 c 0.22,0 0.32,0 0.32,-0.203 0,-0.109 -0.1,-0.109 -0.27,-0.109 H 8.828 c -0.265,0 -0.281,0 -0.39,0.187 L 4.797,-0.9375 4.016,-6.578 C 3.984,-6.812 3.969,-6.812 3.703,-6.812 H 2.344 c -0.188,0 -0.297,0 -0.297,0.187 0,0.125 0.094,0.125 0.281,0.125 0.141,0 0.313,0.016 0.438,0.016 0.156,0.031 0.218,0.047 0.218,0.172 0,0.031 -0.015,0.062 -0.046,0.187 l -1.266,5.063 c -0.094,0.4058 -0.266,0.7183 -1.0783,0.7495 -0.0468,0 -0.1718,0.0156 -0.1718,0.1875 C 0.4219,-0.0312 0.4844,0 0.5625,0 0.875,0 1.219,-0.0312 1.562,-0.0312 1.891,-0.0312 2.25,0 2.578,0 c 0.047,0 0.188,0 0.188,-0.2031 0,-0.1094 -0.11,-0.1094 -0.188,-0.1094 -0.562,0 -0.672,-0.2031 -0.672,-0.4375 0,-0.0625 0,-0.125 0.031,-0.2344 l 1.36,-5.4216 h 0.016 l 0.859,6.1716 C 4.187,-0.1094 4.203,0 4.312,0 4.422,0 4.484,-0.1094 4.531,-0.1719 L 8.563,-6.484 h 0.015 l -1.437,5.7028 c -0.094,0.3906 -0.11,0.4687 -0.907,0.4687 -0.156,0 -0.265,0 -0.265,0.1875 C 5.969,0 6.078,0 6.109,0 6.391,0 7.062,-0.0312 7.344,-0.0312 7.75,-0.0312 8.188,0 8.594,0 c 0.062,0 0.187,0 0.187,-0.2031 0,-0.1094 -0.093,-0.1094 -0.281,-0.1094 -0.359,0 -0.641,0 -0.641,-0.1719 0,-0.0468 0,-0.0625 0.047,-0.25 z" />
+    <path
+       id="U"
+       d="m 6.328,-5.766 c 0.109,-0.406 0.281,-0.703 1.078,-0.734 0.047,0 0.172,-0.016 0.172,-0.203 0,0 0,-0.109 -0.125,-0.109 -0.328,0 -0.687,0.031 -1.016,0.031 -0.343,0 -0.718,-0.031 -1.046,-0.031 -0.063,0 -0.172,0 -0.172,0.203 0,0.109 0.093,0.109 0.172,0.109 0.578,0.016 0.687,0.219 0.687,0.438 0,0.031 -0.031,0.187 -0.031,0.203 l -0.906,3.562 c -0.329,1.3439 -1.485,2.2033 -2.485,2.2033 -0.672,0 -1.203,-0.4375 -1.203,-1.2973 0,-0.015 0,-0.328 0.109,-0.765 L 2.516,-6.047 C 2.609,-6.406 2.625,-6.5 3.359,-6.5 c 0.266,0 0.344,0 0.344,-0.203 0,-0.109 -0.109,-0.109 -0.14,-0.109 -0.282,0 -1,0.031 -1.282,0.031 -0.281,0 -1,-0.031 -1.281,-0.031 -0.0781,0 -0.1875,0 -0.1875,0.203 0,0.109 0.0781,0.109 0.2815,0.109 0.015,0 0.203,0 0.375,0.016 0.172,0.031 0.265,0.031 0.265,0.172 0,0.046 -0.109,0.468 -0.172,0.703 L 1.344,-4.734 C 1.25,-4.344 0.7812,-2.469 0.7344,-2.266 0.6719,-2 0.6719,-1.844 0.6719,-1.687 c 0,1.2026 0.9061,1.9057 1.9531,1.9057 1.25,0 2.484,-1.125 2.812,-2.4377 z" />
+    <path
+       id="V"
+       d="M 6.266,-5.672 C 6.75,-6.453 7.172,-6.484 7.531,-6.5 c 0.125,-0.016 0.141,-0.172 0.141,-0.187 0,-0.079 -0.063,-0.125 -0.141,-0.125 -0.25,0 -0.547,0.031 -0.812,0.031 -0.328,0 -0.672,-0.031 -0.985,-0.031 -0.062,0 -0.187,0 -0.187,0.187 0,0.109 0.078,0.125 0.156,0.125 0.266,0.016 0.453,0.125 0.453,0.328 0,0.156 -0.14,0.375 -0.14,0.375 L 2.953,-0.9219 2.266,-6.203 c 0,-0.172 0.234,-0.297 0.687,-0.297 0.141,0 0.25,0 0.25,-0.203 0,-0.078 -0.078,-0.109 -0.125,-0.109 -0.406,0 -0.828,0.031 -1.25,0.031 -0.172,0 -0.359,0 -0.547,0 -0.172,0 -0.3591,-0.031 -0.531,-0.031 -0.0781,0 -0.1875,0 -0.1875,0.187 0,0.125 0.0781,0.125 0.25,0.125 0.5465,0 0.5625,0.094 0.5935,0.344 l 0.782,6.1404 c 0.031,0.2031 0.078,0.2343 0.203,0.2343 0.156,0 0.203,-0.0468 0.281,-0.1718 z" />
+    <path
+       id="Sigma"
+       d="m 3.703,-3.25 c 0.094,-0.094 0.094,-0.141 0.094,-0.156 0,-0.047 -0.031,-0.11 -0.063,-0.141 L 1.687,-6.5 h 2.297 c 1.688,0 2.188,0.359 2.391,1.938 h 0.25 L 6.344,-6.812 H 0.8125 c -0.2344,0 -0.25,0 -0.25,0.234 L 3.047,-2.969 0.6719,-0.2656 C 0.5625,-0.1562 0.5625,-0.1406 0.5625,-0.1094 0.5625,0 0.6719,0 0.8125,0 H 6.344 l 0.281,-2.359 h -0.25 c -0.172,1.6715 -0.859,1.9371 -2.422,1.9371 h -2.75 z" />
+    <path
+       id="sigma"
+       d="m 5.156,-3.719 c 0.141,0 0.5,0 0.5,-0.343 0,-0.235 -0.219,-0.235 -0.39,-0.235 H 2.984 c -1.5,0 -2.609,1.641 -2.609,2.828 0,0.8753 0.5938,1.5784 1.5,1.5784 1.172,0 2.5,-1.2034 2.5,-2.7344 0,-0.172 0,-0.656 -0.313,-1.094 z M 1.891,-0.1094 C 1.391,-0.1094 1,-0.4687 1,-1.187 c 0,-0.297 0.109,-1.11 0.469,-1.704 0.422,-0.687 1.015,-0.828 1.359,-0.828 0.828,0 0.906,0.656 0.906,0.969 0,0.469 -0.203,1.281 -0.531,1.7969 -0.39,0.5781 -0.937,0.8437 -1.312,0.8437 z" />
+    <path
+       id="eq"
+       d="m 6.844,-3.266 c 0.156,0 0.343,0 0.343,-0.187 C 7.187,-3.656 7,-3.656 6.859,-3.656 H 0.8906 c -0.1406,0 -0.3281,0 -0.3281,0.203 0,0.187 0.1875,0.187 0.3281,0.187 z m 0.015,1.938 c 0.141,0 0.328,0 0.328,-0.203 C 7.187,-1.719 7,-1.719 6.844,-1.719 H 0.8906 c -0.1406,0 -0.3281,0 -0.3281,0.188 0,0.203 0.1875,0.203 0.3281,0.203 z" />
+    <path
+       id="cdot"
+       d="m 1.906,-2.5 c 0,-0.281 -0.234,-0.516 -0.515,-0.516 -0.297,0 -0.5316,0.235 -0.5316,0.516 0,0.297 0.2346,0.531 0.5316,0.531 0.281,0 0.515,-0.234 0.515,-0.531 z" />
+    <path
+       id="_1"
+       d="m 2.328,-4.437 c 0,-0.188 0,-0.188 -0.203,-0.188 -0.453,0.438 -1.078,0.438 -1.3594,0.438 v 0.249 c 0.1563,0 0.6254,0 1.0004,-0.187 v 3.5469 c 0,0.2344 0,0.3281 -0.688,0.3281 H 0.8125 V 0 C 0.9375,0 1.797,-0.0312 2.047,-0.0312 2.266,-0.0312 3.141,0 3.297,0 V -0.25 H 3.031 c -0.703,0 -0.703,-0.0937 -0.703,-0.3281 z" />
+    <path
+       id="_2"
+       d="M 3.516,-1.266 H 3.281 C 3.266,-1.109 3.188,-0.7031 3.094,-0.6406 3.047,-0.5937 2.516,-0.5937 2.406,-0.5937 H 1.125 C 1.859,-1.234 2.109,-1.437 2.516,-1.766 c 0.515,-0.406 1,-0.843 1,-1.5 0,-0.843 -0.735,-1.359 -1.625,-1.359 -0.86,0 -1.4535,0.609 -1.4535,1.25 0,0.344 0.2969,0.391 0.375,0.391 0.1563,0 0.3595,-0.125 0.3595,-0.375 0,-0.125 -0.047,-0.375 -0.4064,-0.375 0.2188,-0.485 0.6874,-0.641 1.0154,-0.641 0.703,0 1.063,0.547 1.063,1.109 0,0.61 -0.438,1.078 -0.656,1.329 L 0.5156,-0.2656 C 0.4375,-0.2031 0.4375,-0.1875 0.4375,0 H 3.313 Z" />
+    <path
+       id="_ast"
+       d="m 3.281,-2.188 c 0.094,-0.031 0.172,-0.078 0.172,-0.203 0,-0.093 -0.078,-0.218 -0.219,-0.218 -0.046,0 -0.078,0.015 -0.14,0.062 L 2.125,-1.906 2.234,-2.953 2.25,-3.047 c 0,-0.078 -0.078,-0.187 -0.219,-0.187 -0.14,0 -0.219,0.093 -0.219,0.187 l 0.125,1.141 -0.9526,-0.641 c -0.0938,-0.047 -0.125,-0.062 -0.1563,-0.062 -0.125,0 -0.2187,0.125 -0.2187,0.218 0,0.125 0.0781,0.172 0.1718,0.203 l 1.0308,0.454 -1.0308,0.437 c -0.0937,0.047 -0.1718,0.078 -0.1718,0.203 0,0.094 0.0937,0.219 0.2187,0.219 0.0625,0 0.0782,-0.0156 0.1407,-0.0625 L 1.937,-1.562 1.812,-0.4375 c 0,0.0938 0.079,0.2031 0.219,0.2031 0.141,0 0.219,-0.1093 0.219,-0.2031 0,-0.0312 -0.125,-1.1095 -0.125,-1.1245 0.219,0.125 0.516,0.328 0.859,0.562 0.188,0.125 0.204,0.125 0.25,0.125 0.141,0 0.219,-0.125 0.219,-0.219 0,-0.125 -0.094,-0.172 -0.14,-0.203 C 2.969,-1.437 2.609,-1.594 2.25,-1.734 Z" />
+    <style
+       type="text/css"
+       id="style16">
+	#fill    { stroke:none; fill:#6af; fill-opacity:1}
+	.arrow   {fill:#000; stroke-width:0.04; stroke:#000;}
+	.x-arrow {fill:#f08; stroke-width:0.06; stroke:#f08;}
+	.y-arrow {fill:#fc0; stroke-width:0.06; stroke:#fc0;}
+	.sigma   {fill:none; stroke-width:0.06; stroke:#00c;}
+	.O- {fill:#08e; stroke:none;}
+</style>
+    <!-- Head of Arrow -->
+    <path
+       id="head"
+       transform="scale(0.5)"
+       d="M -1,0 -6,4 6,0 -6,-5 Z" />
+    <!-- Arrow -->
+    <marker
+       id="Arrow"
+       refX="6"
+       refY="5"
+       markerUnits="strokeWidth"
+       markerWidth="12"
+       markerHeight="9"
+       orient="auto">
+      <g
+         transform="matrix(1.25,0,0,1.25,6,5)"
+         class="arrow"
+         id="g21">
+        <use
+           xlink:href="#head"
+           id="use19"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </marker>
+    <!-- x-Arrow -->
+    <marker
+       id="ArrowX"
+       refX="6"
+       refY="5"
+       markerUnits="strokeWidth"
+       markerWidth="12"
+       markerHeight="9"
+       orient="auto">
+      <g
+         transform="translate(6,5)"
+         class="x-arrow"
+         id="g26">
+        <use
+           xlink:href="#head"
+           id="use24"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </marker>
+    <!-- x-Arrow -->
+    <marker
+       id="ArrowY"
+       refX="6"
+       refY="5"
+       markerUnits="strokeWidth"
+       markerWidth="12"
+       markerHeight="9"
+       orient="auto">
+      <g
+         transform="translate(6,5)"
+         class="y-arrow"
+         id="g31">
+        <use
+           xlink:href="#head"
+           id="use29"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </marker>
+    <!-- Singular Value Indicators -->
+    <g
+       id="sigma-1-2">
+      <path
+         d="M 0,0 H 1.618"
+         id="path34" />
+      <path
+         d="M 0,0 V 0.618"
+         id="path36" />
+    </g>
+    <!-- Unit Circle -->
+    <circle
+       id="fill"
+       r="1"
+       cx="0"
+       cy="0" />
+    <!-- Identity -->
+    <g
+       id="f_id">
+      <use
+         xlink:href="#fill"
+         id="use40"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <path
+         class="x-arrow"
+         d="M 0,0 H 0.82"
+         marker-end="url(#ArrowX)"
+         id="path42" />
+      <path
+         class="y-arrow"
+         d="M 0,0 V 0.82"
+         marker-end="url(#ArrowY)"
+         id="path44" />
+    </g>
+    <!-- Sigma * V^* -->
+    <g
+       id="f_S-Vstar">
+      <use
+         xlink:href="#fill"
+         transform="scale(1.618,0.618)"
+         id="use47"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         xlink:href="#sigma-1-2"
+         class="sigma"
+         id="use49"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <g
+         transform="rotate(-31.717)"
+         id="g55">
+        <path
+           class="x-arrow"
+           d="M 0,0 H 0.82"
+           marker-end="url(#ArrowX)"
+           id="path51" />
+        <path
+           class="y-arrow"
+           d="M 0,0 0.87272,0.87272"
+           marker-end="url(#ArrowY)"
+           id="path53" />
+      </g>
+    </g>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Send-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5478-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Send-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5478-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Send-5-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5478-3-2" />
+    </marker>
+  </defs>
+  <!-- ########################################################################## -->
+  <!-- Background for good Contrast -->
+  <!-- Unit Disc and its Transformations -->
+  <!-- Labels -->
+  <use
+     xlink:href="#f_id"
+     id="use62"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%"
+     transform="matrix(30,0,0,-30,28.5,33.576947)" />
+  <use
+     xlink:href="#f_S-Vstar"
+     transform="matrix(25.519655,-15.771722,-15.771722,-25.519655,191,33.576947)"
+     id="use70"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#f_id"
+     transform="matrix(15.773058,25.518829,25.518829,-15.773058,28.5,158.57694)"
+     id="use76"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#f_S-Vstar"
+     id="use82"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%"
+     transform="matrix(30,0,0,-30,191,158.57694)" />
+  <use
+     xlink:href="#sigma"
+     x="-5.5"
+     y="7"
+     id="use88"
+     transform="matrix(1.25,0,0,1.25,223.5,158.57694)"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#_1"
+     x="0.25"
+     y="8.3999996"
+     id="use90"
+     transform="matrix(1.25,0,0,1.25,223.5,158.57694)"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#sigma"
+     x="-13.5"
+     y="1"
+     id="use94"
+     transform="matrix(1.25,0,0,1.25,192.25,151.07694)"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#_2"
+     x="-7.8499999"
+     y="2.5"
+     id="use96"
+     transform="matrix(1.25,0,0,1.25,192.25,151.07694)"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#sigma"
+     x="1.7"
+     y="6"
+     id="use100"
+     transform="matrix(1.25,0,0,1.25,216,17.326947)"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#_1"
+     x="7.4000001"
+     y="7.5"
+     id="use102"
+     transform="matrix(1.25,0,0,1.25,216,17.326947)"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#sigma"
+     x="-12.6"
+     y="6"
+     id="use106"
+     transform="matrix(1.25,0,0,1.25,186,23.576947)"
+     width="100%"
+     height="100%" />
+  <use
+     xlink:href="#_2"
+     x="-7"
+     y="7.5"
+     id="use108"
+     transform="matrix(1.25,0,0,1.25,186,23.576947)"
+     width="100%"
+     height="100%" />
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:133.333px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px;stroke-width:25"
+     x="72.18074"
+     y="346.5267"
+     id="text10986"><tspan
+       sodipodi:role="line"
+       id="tspan10984"
+       style="stroke-width:25"
+       x="72.18074"
+       y="346.5267" /></text>
+  <metadata
+     id="metadata967">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Singular Value Decomposition</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:133.333px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px;stroke-width:25"
+     x="72.18074"
+     y="346.5267"
+     id="text13410"><tspan
+       sodipodi:role="line"
+       id="tspan13408"
+       style="stroke-width:25"
+       x="72.18074"
+       y="346.5267" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px"
+     x="14.153503"
+     y="273.85977"
+     id="text15066"><tspan
+       sodipodi:role="line"
+       id="tspan15064"
+       x="14.153503"
+       y="273.85977" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px"
+     x="66.466438"
+     y="207.23956"
+     id="text18458"><tspan
+       sodipodi:role="line"
+       id="tspan18456"
+       x="66.466438"
+       y="207.23956">A = U Σ V<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan18856">T</tspan></tspan></text>
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.78;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Send)"
+     d="M 28.878728,74.971769 C 28.380962,120.85731 28.380962,120.85731 28.380962,120.85731"
+     id="path5461" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.78;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Send-3)"
+     d="m 188.86356,125.39873 c 0.49777,-45.885534 0.49777,-45.885534 0.49777,-45.885534"
+     id="path5461-7" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.78;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Send-5)"
+     d="m 83.462627,39.791807 c 45.885543,0.497766 45.885543,0.497766 45.885543,0.497766"
+     id="path5461-5" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.78;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Send-5-6)"
+     d="m 83.462623,156.61695 c 45.885547,0.49776 45.885547,0.49776 45.885547,0.49776"
+     id="path5461-5-9" />
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px"
+     x="104.4333"
+     y="20.689114"
+     id="text11226"><tspan
+       sodipodi:role="line"
+       id="tspan11224"
+       x="104.4333"
+       y="20.689114">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px"
+     x="41.560104"
+     y="97.496696"
+     id="text16038"><tspan
+       sodipodi:role="line"
+       id="tspan16036"
+       x="41.560104"
+       y="97.496696">V<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan16370">T</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px"
+     x="202.21098"
+     y="102.6456"
+     id="text19138"><tspan
+       sodipodi:role="line"
+       id="tspan19136"
+       x="202.21098"
+       y="102.6456">U</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Italic';letter-spacing:0px;word-spacing:0px"
+     x="101.21005"
+     y="143.77031"
+     id="text24856"><tspan
+       sodipodi:role="line"
+       id="tspan24854"
+       x="101.21005"
+       y="143.77031">Σ</tspan></text>
+</svg>
