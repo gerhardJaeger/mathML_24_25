@@ -1,0 +1,24 @@
+digraph {
+	rankdir=LR
+	x1 [label="x₁"]
+	x2 [label="x₂"]
+	v1 [label="v₁ = x₁"]
+	v2 [label="v₂ = x₂"]
+	v3 [label="v₃ = ln(v₁)"]
+	v4 [label="v₄ = v₁ × v₂"]
+	v5 [label="v₅ = sin(v₂)"]
+	v6 [label="v₆ = v₃ + v₄"]
+	v7 [label="v₇ = v₆ - v₅"]
+	y [label="y = v₇"]
+	x1 -> v1
+	x2 -> v2
+	v1 -> v3 [label=ln]
+	v1 -> v4 [label="×"]
+	v2 -> v4
+	v2 -> v5 [label=sin]
+	v3 -> v6 [label="+"]
+	v4 -> v6
+	v6 -> v7 [label="-"]
+	v5 -> v7
+	v7 -> y
+}
